@@ -1,0 +1,39 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { GITHUB_URL, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About | ${SITE_TITLE}`} description="About Harichandan Pulagam" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>About</h1>
+			<p>
+				I'm Harichandan Pulagam, a staff software engineer focused on data platforms in fintech:
+				orchestration, warehouses, and the pipelines that feed them.
+			</p>
+
+			<h2>Selected writing</h2>
+			<ul>
+				<li>
+					<a
+						href="https://eng.wealthfront.com/2026/08/24/optimizing-redshift-write-patterns-tackling-tombstones-and-ghost-rows/"
+						>Optimizing Redshift Write Patterns: Tackling Tombstones and Ghost Rows</a
+					> (Wealthfront Engineering)
+				</li>
+			</ul>
+
+			<h2>Elsewhere</h2>
+			<ul>
+				<li><a href={GITHUB_URL}>GitHub</a></li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

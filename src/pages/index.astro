@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { withBase } from '../utils/url';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Hi, I'm Harichandan.</h1>
+			<p>
+				I'm a Staff Software Engineer working on data platforms. I write about data engineering and infrastructure, 
+				and the judgment calls behind them: what breaks at scale, migrations, and when a
+				tool is the wrong choice.
+			</p>
+			<p><a href={withBase('blog/')}>Read the blog</a> or subscribe via <a href={withBase('rss.xml')}>RSS</a>.</p>
+		</main>
+		<Footer />
+	</body>
+</html>
